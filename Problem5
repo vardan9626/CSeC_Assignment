@@ -4,3 +4,13 @@ And that it had data transfer to and from many devices like the arduino board an
 It took me quite a while to understand that it can contain the value of keystrokes, mouse pointers and what not. 
 I tried to filter out key presses but when i searched it showed that key presses are indicated by an interrurpt and when i filteres all the interrurps there were very and when i used ctf-usb-keyboard-parser tool then also i didnt find any relevent info.
 Then I thought i need to do some more work and i started to read again.
+
+So after a lot of brain stroming i think i found something tho not sure what i found is correct. So i foud that key strokes are in left over capture data.
+So i found the commnad to extract leftover data using "tshark -r example.pcap -T fields -e usb.capdata > usbdata.txt" then after i had this i then tried to extract the 5th and 6th character as they are the ones containing keystroke val.
+Then I extracted it as a file each line representing a keystroke. Then i mapped the hexadecimal val to real keyboard strokes and found this 
+
+gg<<jg[sjep-g]b/njgssg<<g][sjep-ssb/njg[sjeg<<g]b/njep-ssg<<g[sjep-g]b/njg[ssg<<g]bsjep-ssg<</njg[sjep-g]b/njg-ssg<<g[sjep-ss]b/njg[sg<<g]b/njep-ssg<<jg[sjep-g]b/njg[ssg<<g][sjep-ssb/njg[sjeg<<g]b/njgp-ssg<<g[sjep-g]b/njg[ssg<<g]bsjep-ssg<</njg[sjep-g]b/njgssg<<g[sjep-ss]b/njg[sg<<g]b/njep-ssg<<jg[sjep-g]b/njg[ssg<<g]bsjep-ssb/njg[sjeg<<g]b/njgp-ssg<<g[sjep-g]b/njg[ssg<<g]b/sjep-ssg<</njg[sjep-g]b/njgssg<<g[sjep-ss]b/njg[sg<<g]b/njep-ssg<<jg[sjep-g]b/njg[ssg<<g]bsjep-ssg/njg[sjeg<<g]b/njgp-ssg<<g[sjep-s]b/njg[ssg<<g]b/sjep-ssg<<njg[sjep-g]b/njgssg<<g[sjep-ss]b/njg[sg<<g]b/njep-ssg<<jg[sjep-g]b/njg[ssg<<g]bsjep-ssg/njg[sjep<<g]b/njgp-ssg<<g[sjep-s]b/njg[ssg<<g]b/sjep-ssg<<njg[sjep-g]b/njgssg<<g[sjep-ss]b/njg[sjg<<g]b/njep-ssg<<jg[sjep-g]b/njg[ssg<<g]bsjep-ssg/njg[sjep<<g]b/njg-ssg<<g[sjep-s]b/njg[ssg<<g]b/njep-ssg<<njg[sjep-g
+
+where << means backspace.
+
+I also tried another approach tho it didnt work what i did was i installed a sofware which can replay what a usb did if we had the pcapng file of the same i tried to use that but it didnt seem to work out either.
