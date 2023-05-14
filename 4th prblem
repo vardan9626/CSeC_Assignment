@@ -1,0 +1,8 @@
+This was the easiest of all first i went to home directory from there i found 2 flags. In search of the 3rd flag i went in root directory and i got all 3 flags there by just a simple command cat [a-z]*|grep CSeC{.
+
+
+The 3 flags are :
+CSeC{4nd_n0w_y0u_d0n7}
+CSeC{qu1t3_4n_3y3_y0u_g07_7h3r3}
+CSeC{n0w_y0u_s33_m3}
+		

@@ -1,0 +1,2 @@
+The second problem was quite amusing for  me as it was my first time playing CTF. The flag was CSeC{g18_m1r_37w4s_g31s7y420}. 
+Firstly what i did was to read the code and understand it. After that i did some brain storming and figured out that the length of flag must be 29. Once this part was done the problem was relatively easy. All I had to do was to checkfor all values of claw in the given range. once i did that only one flag came out in the desired manner like in the CSeC form so it was evident that it was the correct flag.
